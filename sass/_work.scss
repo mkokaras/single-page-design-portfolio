@@ -19,12 +19,12 @@
 
   .btn-slide {
     border-radius: 50%;
-    background-color: $clr-grey-dark;
     height: 6.4rem;
     width: 6.4rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.4s all;
 
     &--left {
       grid-column: 1;
@@ -34,6 +34,10 @@
     &--right {
       grid-column: 2;
       justify-self: start;
+    }
+
+    &:hover {
+      background-color: $clr-purple;
     }
   }
 }
