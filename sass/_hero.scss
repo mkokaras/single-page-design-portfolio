@@ -1,0 +1,54 @@
+.section-hero {
+  padding-bottom: 10rem;
+}
+
+.hero {
+  h1 {
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 3.2rem;
+    text-align: center;
+  }
+}
+
+.skills {
+  display: grid;
+  gap: 2.4rem;
+  grid-template-rows: 2fr repeat(4, 1fr);
+  padding: 0;
+}
+
+.skill {
+  border-radius: 8px;
+  padding: 2.4rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 4rem;
+
+  &--2,
+  &--3 {
+    grid-row: 2;
+  }
+
+  &--1,
+  &--4,
+  &--5,
+  &--6 {
+    grid-column: 1 / span 2;
+  }
+
+  img {
+    justify-self: end;
+    align-self: start;
+    grid-row: 1;
+  }
+
+  div {
+    justify-self: start;
+    align-self: end;
+    grid-row: 2;
+  }
+}

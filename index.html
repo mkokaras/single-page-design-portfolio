@@ -21,16 +21,118 @@
     <title>Frontend Mentor | Single-page design portfolio</title>
   </head>
   <body>
-    Free Consultation Design solutions made easy With over ten years of
-    experience in various design disciplines, I’m your one-stop shop for your
-    design needs. Graphic Design UI/UX Apps Photography Illustrations Motion
-    Graphics I’m Amy, and I’d love to work on your next project I love working
-    with others to create beautiful design solutions. I’ve designed everything
-    from brand illustrations to complete mobile apps. I’m also handy with a
-    camera! Free Consultation My Work Book a call with me I’d love to have a
-    chat to see how I can help you. The best first step is for us to discuss
-    your project during a free consultation. Then we can move forward from
-    there. Free Consultation Free Consultation
+    <header class="header">
+      <div class="container">
+        <img class="logo" src="/assets/logo.svg" alt="Logo" />
+        <a class="btn-link btn-link--grey-dark" href="#">Free Consultation</a>
+      </div>
+    </header>
+    <main>
+      <section id="hero" class="section-hero">
+        <div class="container hero">
+          <h1 class="heading-1">Design solutions made easy</h1>
+          <p>
+            With over ten years of experience in various design disciplines, I’m
+            your one-stop shop for your design needs.
+          </p>
+          <ul class="skills">
+            <li class="skill skill--1 bg-purple">
+              <img
+                src="assets/pattern-graphic-design.svg"
+                alt="Graphic Design Pattern"
+              />
+              <div class="text-card">Graphic Design</div>
+            </li>
+            <li class="skill skill--2 bg-yellow">
+              <img src="assets/pattern-ui-ux.svg" alt="UI/UX Pattern" />
+              <div class="text-card">UI/UX</div>
+            </li>
+            <li class="skill skill--3 bg-pink">
+              <img src="assets/pattern-apps.svg" alt="Apps Pattern" />
+              <div class="text-card">Apps</div>
+            </li>
+            <li class="skill skill--4 bg-red-light">
+              <img
+                src="assets/pattern-illustrations.svg"
+                alt="Illustrations Pattern"
+              />
+              <div class="text-card">Illustrations</div>
+            </li>
+            <li class="skill skill--5 bg-cyan">
+              <img
+                src="assets/pattern-photography.svg"
+                alt="Photography Pattern"
+              />
+              <div class="text-card">Photography</div>
+            </li>
+            <li class="skill skill--6 bg-purple-dark">
+              <img
+                src="assets/pattern-motion-graphics.svg"
+                alt="Motion graphics Pattern"
+              />
+              <div class="text-card">Motion Graphics</div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="profile" class="section-profile">
+        <div class="container profile">
+          <figure>
+            <img src="./assets/image-amy.webp" alt="Amy's picture" />
+          </figure>
+          <div class="profile__text">
+            <h2 class="heading-2 heading-2--md">
+              I’m Amy, and I’d love to work on your next project
+            </h2>
+            <p>
+              I love working with others to create beautiful design solutions.
+              I’ve designed everything from brand illustrations to complete
+              mobile apps. I’m also handy with a camera!
+            </p>
+            <a class="btn-link btn-link--red-light" href="#">
+              Free Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="work" class="section-work">
+        <div class="work">
+          <h2 class="heading-2 heading-2--sm">My Work</h2>
+          <div class="slider">
+            <img src="/assets/image-slide-1.jpg" alt="Design showcase" />
+          </div>
+          <button class="btn-slide btn-slide--left">
+            <img src="/assets/icon-arrow-left.svg" alt="Left arrow" />
+          </button>
+          <button class="btn-slide btn-slide--right">
+            <img src="/assets/icon-arrow-right.svg" alt="Right arrow" />
+          </button>
+        </div>
+      </section>
+      <section id="cta" class="section-cta">
+        <div class="container">
+          <div class="cta bg-grey-dark text-grey-light-2">
+            <h2 class="heading-2 heading-2--md heading-2--light">
+              Book a call with me
+            </h2>
+            <p>
+              I’d love to have a chat to see how I can help you. The best first
+              step is for us to discuss your project during a free consultation.
+              Then we can move forward from there.
+            </p>
+            <a class="btn-link btn-link--red-light" href="#">
+              Free Consultation
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <img class="logo" src="/assets/logo.svg" alt="Logo" />
+        <a class="btn-link btn-link--grey-dark" href="#">Free Consultation</a>
+      </div>
+    </footer>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

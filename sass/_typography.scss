@@ -15,16 +15,35 @@
 
 .heading-2 {
   color: $clr-grey-dark;
-  font-size: $fs-heading-md;
   line-height: 1.25;
   font-weight: $fw-bold;
 
-  @media (min-width: $bp-tablet) {
-    font-size: 3.2rem;
+  &--md {
+    font-size: $fs-heading-md;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 3.2rem;
+    }
+
+    @media (min-width: $bp-desktop) {
+      font-size: 4rem;
+    }
   }
 
-  @media (min-width: $bp-desktop) {
-    font-size: 4rem;
+  &--sm {
+    font-size: $fs-heading-sm;
+
+    @media (min-width: $bp-tablet) {
+      font-size: 3.2rem;
+    }
+
+    @media (min-width: $bp-desktop) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &--light {
+    color: $clr-grey-light-2;
   }
 }
 

@@ -1,0 +1,19 @@
+.section-profile {
+  padding-bottom: 10rem;
+}
+
+.profile {
+  display: grid;
+  gap: 4rem;
+
+  &__text {
+    text-align: center;
+
+    h2 {
+      margin-bottom: 2.4rem;
+    }
+    p {
+      margin-bottom: 2.4rem;
+    }
+  }
+}
