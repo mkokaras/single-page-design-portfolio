@@ -40,6 +40,10 @@ $ff-primary: "Plus Jakarta Sans", sans-serif;
 
 $bp-tablet: 48em;
 
+$bp-small-tablet: 37.5em;
+
+$bp-small-desktop: 75em;
+
 $bp-desktop: 90em;
 
 /* ----- Utility classes ----- */
@@ -104,6 +108,11 @@ $bp-desktop: 90em;
   display: inline-block;
   text-decoration: none;
 
+  @media (min-width: $bp-small-tablet) {
+    padding: 1.4rem 4.5rem;
+    font-size: 1.6rem;
+  }
+
   &--red-light {
     &:link,
     &:visited {
@@ -134,8 +143,12 @@ $bp-desktop: 90em;
   margin: 0 auto;
   padding: 0 1.6rem;
 
-  @media (min-width: $bp-tablet) {
+  @media (min-width: $bp-small-tablet) {
     padding: 0 4rem;
+  }
+
+  @media (min-width: $bp-small-desktop) {
+    padding: 0 9.6rem;
   }
 }
 
@@ -150,12 +163,7 @@ $bp-desktop: 90em;
   width: 4.8rem;
   height: 4.8rem;
 
-  @media (min-width: $bp-tablet) {
-    width: 4.8rem;
-    height: 4.8rem;
-  }
-
-  @media (min-width: $bp-desktop) {
+  @media (min-width: $bp-small-tablet) {
     width: 6.4rem;
     height: 6.4rem;
   }

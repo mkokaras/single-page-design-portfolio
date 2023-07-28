@@ -1,5 +1,13 @@
 .section-work {
   padding-bottom: 10rem;
+
+  @media (min-width: $bp-tablet) {
+    padding-bottom: 12rem;
+  }
+
+  @media (min-width: $bp-desktop) {
+    padding-bottom: 8.8rem;
+  }
 }
 
 .work {
@@ -7,6 +15,10 @@
   grid-template-columns: 1fr 1fr;
   row-gap: 3.2rem;
   column-gap: 1.6rem;
+
+  @media (min-width: $bp-tablet) {
+    row-gap: 5.6rem;
+  }
 
   h2 {
     grid-column: 1 / -1;
