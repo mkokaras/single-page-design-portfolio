@@ -1,16 +1,21 @@
 import "./style.scss";
 
+const BREAKPOINT = 768;
+
 const slider = document.querySelector(".slider");
 const initialSlides = document.querySelectorAll(".slide");
 const btnLeft = document.querySelector(".btn-slide--left");
 const btnRight = document.querySelector(".btn-slide--right");
+
 let currSlide = 2;
 
-const bp = 768;
+// Calc remaining space (screen - img width) to center the slide.
 
 const dist = `${Math.round(
   (slider.clientWidth - initialSlides[0].clientWidth) / 2
 )}px`;
+
+//Clear DOM functions
 
 const appendCloneSlides = function () {
   for (let i = 0; i < initialSlides.length; i++) {
@@ -18,12 +23,10 @@ const appendCloneSlides = function () {
   }
 };
 
-const deletePrependClones = function (slides) {
-  slides.forEach((slide, index) => {
-    if (index < initialSlides.length) {
-      slide.remove();
-    }
-  });
+const prependCloneSlides = function () {
+  for (let i = initialSlides.length - 1; i >= 0; i--) {
+    slider.prepend(initialSlides[i].cloneNode(true));
+  }
 };
 
 const deleteAppendClones = function (slides) {
@@ -34,22 +37,29 @@ const deleteAppendClones = function (slides) {
   });
 };
 
-const prependCloneSlides = function () {
-  for (let i = initialSlides.length - 1; i >= 0; i--) {
-    slider.prepend(initialSlides[i].cloneNode(true));
-  }
+const deletePrependClones = function (slides) {
+  slides.forEach((slide, index) => {
+    if (index < initialSlides.length) {
+      slide.remove();
+    }
+  });
 };
 
+// Note: gap must be multiplied in order to have correct spacing.
+
 const calcSlides = function (currSlide, slides) {
-  const gap = document.documentElement.clientWidth > bp ? 3 : 1.5;
+  // Calc gap based on width.
+
+  const gap = document.documentElement.clientWidth > BREAKPOINT ? 3 : 1.5;
 
   slides.forEach((slide, index) => {
-    // Base case for non - edge slides
+    // If its current, just center it
 
     if (currSlide === index) {
       slide.style.transform = `translateX(${dist})`;
-      // slide.style.marginLeft = dist;
     }
+
+    // If its next slide, shift based on currSlide, center it, and add gap.
 
     if (currSlide > index) {
       const mult = currSlide - index;
@@ -57,9 +67,9 @@ const calcSlides = function (currSlide, slides) {
       slide.style.transform = `translateX(calc(${dist} - ${mult * 100}% - ${
         mult * gap
       }rem))`;
-
-      // slide.style.marginLeft = dist;
     }
+
+    // If its prev slide, shift based on currSlide, center it, and add gap.
 
     if (currSlide < index) {
       const mult = index - currSlide;
@@ -67,11 +77,11 @@ const calcSlides = function (currSlide, slides) {
       slide.style.transform = `translateX(calc(${dist} + ${mult * 100}% + ${
         mult * gap
       }rem))`;
-
-      // slide.style.marginLeft = dist;
     }
   });
 };
+
+// Init carousel by adding clone nodes.
 
 const initCarousel = function () {
   appendCloneSlides();
@@ -81,6 +91,10 @@ const initCarousel = function () {
 
   calcSlides(currSlide, slides);
 };
+
+// Go to prev slide.
+// if currSlide is 3, add clone (if its 1 the transition is not smooth)
+// recalc currSlide (since new nodes added and removed)
 
 btnLeft.addEventListener("click", () => {
   currSlide--;
@@ -103,6 +117,10 @@ btnLeft.addEventListener("click", () => {
 
   calcSlides(currSlide, slides);
 });
+
+// Go to next slide.
+// if currSlide is length - 3, add clone (if its lenght - 1 the transition is not smooth)
+// recalc currSlide (since new nodes added and removed)
 
 btnRight.addEventListener("click", () => {
   currSlide++;
