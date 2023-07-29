@@ -96,7 +96,7 @@ const initCarousel = function () {
 // if currSlide is 3, add clone (if its 1 the transition is not smooth)
 // recalc currSlide (since new nodes added and removed)
 
-btnLeft.addEventListener("click", () => {
+const goToPrevious = () => {
   currSlide--;
 
   let slides = document.querySelectorAll(".slide");
@@ -116,13 +116,12 @@ btnLeft.addEventListener("click", () => {
   }
 
   calcSlides(currSlide, slides);
-});
+};
 
 // Go to next slide.
 // if currSlide is length - 3, add clone (if its lenght - 1 the transition is not smooth)
 // recalc currSlide (since new nodes added and removed)
-
-btnRight.addEventListener("click", () => {
+const goToNext = () => {
   currSlide++;
 
   let slides = document.querySelectorAll(".slide");
@@ -142,6 +141,19 @@ btnRight.addEventListener("click", () => {
   }
 
   calcSlides(currSlide, slides);
+};
+
+btnLeft.addEventListener("click", goToPrevious);
+
+btnRight.addEventListener("click", goToNext);
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "ArrowLeft") {
+    goToPrevious();
+  }
+  if (event.key === "ArrowRight") {
+    goToNext();
+  }
 });
 
 initCarousel();
