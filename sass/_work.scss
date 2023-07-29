@@ -27,6 +27,21 @@
 
   .slider {
     grid-column: 1 / -1;
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+
+    @media (min-width: $bp-tablet) {
+      height: 360px;
+    }
+  }
+
+  .slide {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: 0.4s transform;
+    border-radius: 10px;
   }
 
   .btn-slide {
