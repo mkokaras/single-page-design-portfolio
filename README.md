@@ -14,6 +14,7 @@ This is a solution to the [Single-page design portfolio challenge on Frontend Me
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
     - [Useful resources](#useful-resources)
+    - [TODO](#todo)
   - [Author](#author)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
@@ -34,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Code: [Github](https://your-solution-url.com)
-- Site: [Github pages](https://your-live-site-url.com)
+- Code: [Github](https://github.com/mkokaras/single-page-design-portfolio)
+- Site: [Github pages](https://mkokaras.github.io/single-page-design-portfolio/)
 
 ## My process
 
@@ -55,6 +56,10 @@ The biggest challenge was the creation of the custom slideshow/carousel without 
 ### Useful resources
 
 - [Glidejs](https://github.com/glidejs/glide) - This cleared out some things about implementing a carousel.
+
+### TODO
+
+- Enchance custom carousel
 
 ## Author
 
