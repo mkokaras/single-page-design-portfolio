@@ -67,4 +67,8 @@
       background-color: $clr-purple;
     }
   }
+
+  .remove-transition {
+    transition: none;
+  }
 }

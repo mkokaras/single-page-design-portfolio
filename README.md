@@ -60,6 +60,7 @@ The biggest challenge was the creation of the custom slideshow/carousel without 
 ### TODO
 
 - Enchance custom carousel
+- Add transition on carousel (removed them, caused weird effect on append/prepend)
 
 ## Author
 

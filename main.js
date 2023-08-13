@@ -7,7 +7,7 @@ const initialSlides = document.querySelectorAll(".slide");
 const btnLeft = document.querySelector(".btn-slide--left");
 const btnRight = document.querySelector(".btn-slide--right");
 
-let currSlide = 2;
+let currSlide = 2 + initialSlides.length;
 
 // Calc remaining space (screen - img width) to center the slide.
 
@@ -16,6 +16,18 @@ const dist = `${Math.round(
 )}px`;
 
 //Clear DOM functions
+
+// const removeTransition = function () {
+//   const allSlides = slider.querySelectorAll("*");
+
+//   allSlides.forEach((slide) => slide.classList.add("remove-transition"));
+// };
+
+// const addTransiton = function () {
+//   const allSlides = slider.querySelectorAll("*");
+
+//   allSlides.forEach((slide) => slide.classList.remove("remove-transition"));
+// };
 
 const appendCloneSlides = function () {
   for (let i = 0; i < initialSlides.length; i++) {
